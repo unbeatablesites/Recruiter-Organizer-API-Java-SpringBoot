@@ -9,11 +9,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 class AppApplicationTests {
 
-	@Autowired
-	RecruiterRepository recruiterRepository;
-
 	@Test
 	void contextLoads() {
 	}
+
+
 
 }
