@@ -52,8 +52,8 @@ class RecruiterRepositoryTest {
         List<RecruiterInfo> listOfRec2 = recruiterRepository.findByrecruiterFirstName("Carl");
             assertEquals(1, listOfRec2.size());
 
-        List<RecruiterInfo> listOfRec3 = recruiterRepository.findByrecruiterFirstName("Mike");
-        assertEquals(false, listOfRec.contains("Mike"));
+        List<RecruiterInfo> listOfRec3 = recruiterRepository.findByrecruiterFirstName("Frank");
+        assertEquals(true, listOfRec3.contains("Frank"));
 
 
     }
