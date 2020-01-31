@@ -13,6 +13,6 @@ public interface RecruiterRepository  extends JpaRepository<RecruiterInfo, Integ
 
     List<RecruiterInfo> findByrecruiterFirstName(String recruiterFirstName);
     List<RecruiterInfo> findByrecruiterPhoneNumber(String recruiterPhoneNumber);
-    List<RecruiterInfo> companyName(String companyName);
+    List<RecruiterInfo> findBycompanyName(String companyName);
 
 }
