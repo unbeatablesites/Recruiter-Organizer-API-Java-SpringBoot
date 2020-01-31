@@ -6,6 +6,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
+import java.time.LocalTime;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -14,8 +16,13 @@ public class RecruiterInfo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer recruiterId;
-    private String recruiterName;
+    private String recruiterFirstName;
+    private String recruiterLastName;
     private String companyName;
+    private String recruiterPhoneNumber;
+    private LocalDate dateLastSpokeTo;
+    private Boolean interested;
+    private String notes;
 
 
 }
