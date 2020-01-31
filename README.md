@@ -1,1 +1,1 @@
-# Recruter-Organizer-API-Java-SpringBoot
+# Recruiter-Organizer-API-Java-SpringBoot
