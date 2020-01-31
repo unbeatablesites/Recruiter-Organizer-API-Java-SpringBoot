@@ -11,8 +11,8 @@ import java.util.List;
 public interface RecruiterRepository  extends JpaRepository<RecruiterInfo, Integer> {
 
 
-    List<RecruiterInfo> findByFirstName(String recruiterFirstName);
-    List<RecruiterInfo> findByPhoneNumber(String recruiterPhoneNumber);
-    List<RecruiterInfo> findByCompany(String companyName);
+    List<RecruiterInfo> findByrecruiterFirstName(String recruiterFirstName);
+    List<RecruiterInfo> findByrecruiterPhoneNumber(String recruiterPhoneNumber);
+    List<RecruiterInfo> companyName(String companyName);
 
 }
