@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.Objects;
 
 @Entity
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
@@ -84,5 +85,25 @@ public class RecruiterInfo {
 
     public void setNotes(String notes) {
         this.notes = notes;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        RecruiterInfo that = (RecruiterInfo) o;
+        return recruiterId.equals(that.recruiterId) &&
+                recruiterFirstName.equals(that.recruiterFirstName) &&
+                recruiterLastName.equals(that.recruiterLastName) &&
+                companyName.equals(that.companyName) &&
+                recruiterPhoneNumber.equals(that.recruiterPhoneNumber) &&
+                dateLastSpokeTo.equals(that.dateLastSpokeTo) &&
+                interested.equals(that.interested) &&
+                notes.equals(that.notes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(recruiterId, recruiterFirstName, recruiterLastName, companyName, recruiterPhoneNumber, dateLastSpokeTo, interested, notes);
     }
 }
