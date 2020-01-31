@@ -27,6 +27,8 @@ class RecruiterRepositoryTest {
         newRecruiter.setRecruiterPhoneNumber("404-250-2486");
         newRecruiter.setCompanyName("NASA");
         newRecruiter.setDateLastSpokeTo(LocalDate.of(2020,01,31));
+        newRecruiter.setInterested(true);
+        newRecruiter.setNotes("Very cool sounding job!");
     }
 
     @Test
