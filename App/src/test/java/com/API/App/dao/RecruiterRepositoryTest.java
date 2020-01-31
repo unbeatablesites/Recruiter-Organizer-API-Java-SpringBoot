@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class RecruiterRepositoryTest {
@@ -20,8 +22,11 @@ class RecruiterRepositoryTest {
 
         RecruiterInfo newRecruiter = new RecruiterInfo();
 
-            newRecruiter.setRecruiterFirstName("Frank");
+        newRecruiter.setRecruiterFirstName("Frank");
         newRecruiter.setRecruiterLastName("Uzoka");
+        newRecruiter.setRecruiterPhoneNumber("404-250-2486");
+        newRecruiter.setCompanyName("NASA");
+        newRecruiter.setDateLastSpokeTo(LocalDate.of(2020,01,31));
     }
 
     @Test
