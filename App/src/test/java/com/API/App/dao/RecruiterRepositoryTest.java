@@ -29,6 +29,10 @@ class RecruiterRepositoryTest {
         newRecruiter.setDateLastSpokeTo(LocalDate.of(2020,01,31));
         newRecruiter.setInterested(true);
         newRecruiter.setNotes("Very cool sounding job!");
+
+        recruiterRepository.save(newRecruiter);
+
+
     }
 
     @Test
