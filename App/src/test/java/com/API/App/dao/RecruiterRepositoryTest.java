@@ -20,7 +20,7 @@ class RecruiterRepositoryTest {
 
         RecruiterInfo newRecruiter = new RecruiterInfo();
 
-
+            newRecruiter.setRecruiterFirstName("Frank");
 
     }
 
