@@ -1,5 +1,6 @@
 package com.API.App.dao;
 
+import com.API.App.model.RecruiterInfo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -14,6 +15,13 @@ class RecruiterRepositoryTest {
 
     @Test
     void findByrecruiterFirstName() {
+
+        recruiterRepository.deleteAll();
+
+        RecruiterInfo newRecruiter = new RecruiterInfo();
+
+
+
     }
 
     @Test
