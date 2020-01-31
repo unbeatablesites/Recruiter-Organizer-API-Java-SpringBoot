@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
@@ -32,6 +33,8 @@ class RecruiterRepositoryTest {
 
         recruiterRepository.save(newRecruiter);
 
+        List<RecruiterInfo> listOfRec = recruiterRepository.findAll();
+        assertEquals(1, listOfRec.size());
 
     }
 
