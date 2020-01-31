@@ -33,10 +33,23 @@ class RecruiterRepositoryTest {
 
         recruiterRepository.save(newRecruiter);
 
-        List<RecruiterInfo> listOfRec = recruiterRepository.findAll();
-        assertEquals(1, listOfRec.size());
+        RecruiterInfo newRecruiter2 = new RecruiterInfo();
 
-        List<RecruiterInfo> listOfRec2 = recruiterRepository.findByrecruiterFirstName("Frank");
+        newRecruiter2.setRecruiterFirstName("Carl");
+        newRecruiter2.setRecruiterLastName("Baker");
+        newRecruiter2.setRecruiterPhoneNumber("770-250-2020");
+        newRecruiter2.setCompanyName("IBM");
+        newRecruiter2.setDateLastSpokeTo(LocalDate.of(2020,01,30));
+        newRecruiter2.setInterested(false);
+        newRecruiter2.setNotes("Not so cool sounding job!");
+
+        recruiterRepository.save(newRecruiter2);
+
+
+        List<RecruiterInfo> listOfRec = recruiterRepository.findAll();
+        assertEquals(2, listOfRec.size());
+
+        List<RecruiterInfo> listOfRec2 = recruiterRepository.findByrecruiterFirstName("Carl");
         assertEquals(1, listOfRec.size());
 
         List<RecruiterInfo> listOfRec3 = recruiterRepository.findByrecruiterFirstName("Mike");
