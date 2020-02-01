@@ -6,5 +6,7 @@ Link to api: https://recruiter-organizer-api-java-springboot.cfapps.io/recruiter
 
 Job Search Organizer to help me track, manage, and take action on various job search activities.
 
+Also included a few automated test in the test file.
+
 
 
