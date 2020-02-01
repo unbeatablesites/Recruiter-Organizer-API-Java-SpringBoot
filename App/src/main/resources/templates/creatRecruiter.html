@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Spring Boot  Thymeleaf </title>
+        <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+    </head>
+	<body>
+	<h2></h2>
+	    <h1>Create Recruiter</h1>
+	    <form action="#" th:action="@{/recruiters/add}" th:object="${userRecruiter}" method="POST">
+	      <table>
+	    	<tr><td>User ID</td>
+	    	    <td>
+	    	       <input type="text" th:field="*{recruiterId}" />
+	    	       <label th:if="${#fields.hasErrors('recruiterId')}" th:class="'error'">Enter Id</label>
+	    	    </td>
+	    	</tr>
+	    	<tr><td>First Name</td>
+	    	    <td>
+	    	      <input type="text" th:field="*{recruiterFirstName}" />
+	    	      <label th:if="${#fields.hasErrors('recruiterFirstName')}"  th:class="'error'">Enter First Name</label>
+	    	    </td>
+	    	</tr>
+
+			  <tr><td>Last Name</td>
+				  <td>
+					  <input type="text" th:field="*{recruiterLastName}" />
+					  <label th:if="${#fields.hasErrors('recruiterLastName')}"  th:class="'error'">Enter Last Name</label>
+				  </td>
+			  </tr>
+
+			  <tr><td>Company Name</td>
+				  <td>
+					  <input type="text" th:field="*{companyName}" />
+					  <label th:if="${#fields.hasErrors('companyName')}"  th:class="'error'">Enter Company Name</label>
+				  </td>
+			  </tr>
+
+			  <tr><td>Recruiter Phone Number</td>
+				  <td>
+					  <input type="text" th:field="*{recruiterPhoneNumber}" />
+					  <label th:if="${#fields.hasErrors('recruiterPhoneNumber')}"  th:class="'error'">Enter Recruiter Phone Number</label>
+				  </td>
+			  </tr>
+
+			  <tr><td>When I spoke with them last</td>
+				  <td>
+					  <input type="text" th:field="*{dateLastSpokeTo}" />
+					  <label th:if="${#fields.hasErrors('dateLastSpokeTo')}"  th:class="'error'">Please enter date last spoke with rep</label>
+				  </td>
+			  </tr>
+
+	    	<tr><td>Interested in this company?</td>
+	    	   <td>
+	    	       <input type="radio" th:field="*{interested}" value="true"/><label>True</label>
+	    	       <input type="radio" th:field="*{interested}" value="false"/><label>False</label>
+	    	       <label th:if="${#fields.hasErrors('interested')}"  th:class="'error'">Select true or false</label>
+	    	   </td>
+	    	</tr>
+
+			  <tr><td>Notes about meeting</td>
+				  <td>
+					  <input type="text" th:field="*{notes}" />
+					  <label th:if="${#fields.hasErrors('notes')}"  th:class="'error'">Enter notes about call</label>
+				  </td>
+			  </tr>
+
+	        <tr><td colspan="2">
+	              <input type="submit" th:value="Submit"/> 
+	              <input type="reset" th:value="Reset"/>
+	            </td>
+	        </tr>
+	      </table>  
+	    </form>
+	</body>
+</html> 

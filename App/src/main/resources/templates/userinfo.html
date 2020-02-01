@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+      <title> Spring Boot  Thymeleaf </title>
+      <link rel="stylesheet" th:href="@{/css/styles.css}"/>
+</head>
+<body>
+   <h1>User Details</h1>
+    <table>
+        <tr>
+           <th>UserID</th>
+           <th >First Name</th>
+           <th >Last Name</th>
+           <th >Company Name</th>
+           <th >Phone Number</th>
+           <th>Date</th>
+           <th>Intrest</th>
+           <th>Notes</th>
+        </tr>
+        <tr th:each="userRecruiter : ${allRecruiter}">
+<!--	      <td th:text="${userRecruiter.recruiterId}">Id</td>-->
+		  <td th:text="${userRecruiter.recruiterFirstName}">First Name</td>
+		  <td th:text="${userRecruiter.recruiterLastName}">Last Name</td>
+		  <td th:text="${userRecruiter.companyName}">Company Name</td>
+		  <td th:text="${userRecruiter.recruiterPhoneNumber}">Phone Number</td>
+		  <td th:text="${userRecruiter.dateLastSpokeTo}">Date</td>
+		  <td th:text="${userRecruiter.interested}">Intrest</td>
+		  <td th:text="${userRecruiter.notes}">Profile notes</td>
+	    </tr>
+	</table>
+	<a href="#" th:href="@{/recruiters/add}">Add User</a>
+</body>
+</html> 
