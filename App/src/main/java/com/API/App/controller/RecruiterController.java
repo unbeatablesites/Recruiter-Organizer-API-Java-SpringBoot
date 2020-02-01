@@ -5,13 +5,12 @@ import com.API.App.model.RecruiterInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
-@Controller
+
 @RestController
 @RequestMapping("/recruiters")
 public class RecruiterController {
@@ -28,7 +27,7 @@ public class RecruiterController {
     }
 
     @PostMapping("/add")
-    public ModelAndView createRecruiter(@ModelAttribute RecruiterInfo recruiterInfo , BindingResult result){
+    public ModelAndView createRecruiter(RecruiterInfo recruiterInfo , BindingResult result){
        ModelAndView modelAndView = new ModelAndView();
 
 //        if (result.hasErrors()) {
