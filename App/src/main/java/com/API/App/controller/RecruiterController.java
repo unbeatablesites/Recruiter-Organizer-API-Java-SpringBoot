@@ -36,7 +36,7 @@ public class RecruiterController {
 
     @GetMapping("/phone/{recruiterPhoneNumber}")
     public List<RecruiterInfo> findByPhoneNumber(@PathVariable String recruiterPhoneNumber){
-        return recruiterRepository.findByrecruiterFirstName(recruiterPhoneNumber);
+        return recruiterRepository.findByrecruiterPhoneNumber(recruiterPhoneNumber);
     }
 
 }
