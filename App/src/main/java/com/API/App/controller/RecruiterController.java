@@ -27,6 +27,7 @@ public class RecruiterController {
     }
 
     @PostMapping("/add")
+//    If returning a viewModel as well don't include @RequestBody. This is for API's only
     public ModelAndView createRecruiter(RecruiterInfo recruiterInfo , BindingResult result){
        ModelAndView modelAndView = new ModelAndView();
 
