@@ -24,7 +24,7 @@ public class RecruiterController {
         return recruiterRepository.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/{recruiterId}")
     public RecruiterInfo findRecruiterById(@PathVariable Integer recruiterId){
         return recruiterRepository.findById(recruiterId).orElse(null);
     }
