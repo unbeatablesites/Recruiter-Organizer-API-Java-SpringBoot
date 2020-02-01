@@ -79,7 +79,7 @@ class RecruiterRepositoryTest {
 
         newRecruiter2.setRecruiterFirstName("Carl");
         newRecruiter2.setRecruiterLastName("Baker");
-        newRecruiter2.setRecruiterPhoneNumber("770-250-2020");
+        newRecruiter2.setRecruiterPhoneNumber("404-250-2486");
         newRecruiter2.setCompanyName("IBM");
         newRecruiter2.setDateLastSpokeTo(LocalDate.of(2020,01,30));
         newRecruiter2.setInterested(false);
@@ -92,7 +92,7 @@ class RecruiterRepositoryTest {
         assertEquals(2, listOfRec.size());
 
         List<RecruiterInfo> listOfRec2 = recruiterRepository.findByrecruiterPhoneNumber("404-250-2486");
-        assertEquals(1, listOfRec2.size());
+        assertEquals(2, listOfRec2.size());
 
 
     }
