@@ -34,8 +34,6 @@ public class RecruiterController {
         return recruiterRepository.findByrecruiterFirstName(recruiterFirstName);
         }
 
-
-
 //    GetMapping("/{recruiterFirstName}")
 
 
