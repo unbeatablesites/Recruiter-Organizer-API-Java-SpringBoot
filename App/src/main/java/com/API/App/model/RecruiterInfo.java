@@ -3,7 +3,6 @@ package com.API.App.model;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotEmpty;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.util.Objects;
@@ -17,20 +16,12 @@ public class RecruiterInfo {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer recruiterId;
 
-
-    @NotEmpty(message = "Must enter first name")
     private String recruiterFirstName;
-    @NotEmpty(message = "Must enter last name")
     private String recruiterLastName;
-    @NotEmpty(message = "Must enter company name")
     private String companyName;
-    @NotEmpty(message = "Must enter phone number")
     private String recruiterPhoneNumber;
-    @NotEmpty(message = "Must enter date")
     private LocalDate dateLastSpokeTo;
-    @NotEmpty(message = "Must enter true or false")
     private Boolean interested;
-    @NotEmpty(message = "Must enter a message")
     private String notes;
 
     public Integer getRecruiterId() {
