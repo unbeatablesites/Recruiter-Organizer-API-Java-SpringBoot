@@ -27,7 +27,7 @@ public class RecruiterController {
     }
 
     @PostMapping("/add")
-    public ModelAndView createRecruiter(@RequestBody RecruiterInfo recruiterInfo , BindingResult result){
+    public ModelAndView createRecruiter(RecruiterInfo recruiterInfo , BindingResult result){
        ModelAndView modelAndView = new ModelAndView();
 
 //        if (result.hasErrors()) {

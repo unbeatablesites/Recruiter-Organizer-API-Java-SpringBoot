@@ -14,11 +14,11 @@
            <th >Company Name</th>
            <th >Phone Number</th>
            <th>Date</th>
-           <th>Intrest</th>
+           <th>Interest</th>
            <th>Notes</th>
         </tr>
         <tr th:each="userRecruiter : ${allRecruiter}">
-<!--	      <td th:text="${userRecruiter.recruiterId}">Id</td>-->
+	      <td th:text="${userRecruiter.recruiterId}">Id</td>
 		  <td th:text="${userRecruiter.recruiterFirstName}">First Name</td>
 		  <td th:text="${userRecruiter.recruiterLastName}">Last Name</td>
 		  <td th:text="${userRecruiter.companyName}">Company Name</td>
