@@ -39,9 +39,11 @@ public class RecruiterController {
         return recruiterRepository.findByrecruiterPhoneNumber(recruiterPhoneNumber);
     }
 
-    @PutMapping("/updateRecruiter/{recruiterId}")
+    @PutMapping("/updateRecruiter")
     public RecruiterInfo updateRecruiter(@RequestBody RecruiterInfo recruiterId){
         return recruiterRepository.save(recruiterId);
     }
+
+
 
 }
