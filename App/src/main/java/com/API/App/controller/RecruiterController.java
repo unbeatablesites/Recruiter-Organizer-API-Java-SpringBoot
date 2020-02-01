@@ -22,6 +22,7 @@ public class RecruiterController {
     @GetMapping("/all")
     public List<RecruiterInfo> getAllRecruiters(){
         return recruiterRepository.findAll();
+
     }
 
 
