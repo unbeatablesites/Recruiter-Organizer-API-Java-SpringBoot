@@ -29,12 +29,14 @@ public class RecruiterController {
         return recruiterRepository.findById(recruiterId).orElse(null);
     }
 
-    @GetMapping("/{recruiterFirstName}")
+    @GetMapping("/names/{recruiterFirstName}")
     public List<RecruiterInfo> findByFirstName(@PathVariable String recruiterFirstName){
         return recruiterRepository.findByrecruiterFirstName(recruiterFirstName);
         }
 
-//    GetMapping("/{recruiterFirstName}")
-
+    @GetMapping("/{recruiterPhoneNumber}")
+    public List<RecruiterInfo> findByPhoneNumber(@PathVariable String recruiterPhoneNumber){
+        return recruiterRepository.findByrecruiterFirstName(recruiterPhoneNumber);
+    }
 
 }
