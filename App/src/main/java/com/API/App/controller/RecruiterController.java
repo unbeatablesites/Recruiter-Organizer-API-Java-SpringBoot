@@ -44,7 +44,7 @@ public class RecruiterController {
         return recruiterRepository.save(recruiterId);
     }
 
-    @DeleteMapping("/deleteRecruiter/{recruiterId}")
+    @DeleteMapping("/    /{recruiterId}")
     public void removeRecruiter(@PathVariable Integer recruiterId){
         recruiterRepository.deleteById(recruiterId);
     }
