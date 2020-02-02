@@ -1,10 +1,11 @@
 package com.API.App.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalTime;
+//import java.time.LocalTime;
 import java.util.Objects;
 
 @Entity
@@ -20,6 +21,8 @@ public class RecruiterInfo {
     private String recruiterLastName;
     private String companyName;
     private String recruiterPhoneNumber;
+
+    @DateTimeFormat(pattern = "MM-dd-yyyy")
     private LocalDate dateLastSpokeTo;
     private Boolean interested;
     private String notes;

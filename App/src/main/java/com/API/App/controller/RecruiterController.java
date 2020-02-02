@@ -25,18 +25,17 @@ public class RecruiterController {
         modelAndView.addObject("allProfiles", getAllRecruiters());
         return modelAndView;
     }
-
     @PostMapping("/add")
 //    If returning a viewModel as well don't include @RequestBody. This is for API's only
     public ModelAndView createRecruiter(RecruiterInfo recruiterInfo , BindingResult result){
        ModelAndView modelAndView = new ModelAndView();
 
-//        if (result.hasErrors()) {
-////            logger.info("Validation errors while submitting form.");
-//            modelAndView.setViewName("creatRecruiter");
-//            modelAndView.addObject("userRecruiter", recruiterInfo);
-//            return modelAndView;
-//        }
+        if (result.hasErrors()) {
+            logger.info("Validation errors while submitting form.");
+            modelAndView.setViewName("creatRecruiter");
+            modelAndView.addObject("userRecruiter", recruiterInfo);
+            return modelAndView;
+        }
         recruiterRepository.save(recruiterInfo);
         modelAndView.addObject("allRecruiter", recruiterRepository.findAll());
         modelAndView.setViewName("userinfo");
