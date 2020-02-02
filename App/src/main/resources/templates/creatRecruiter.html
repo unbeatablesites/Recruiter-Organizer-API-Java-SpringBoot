@@ -45,7 +45,7 @@
 
 			  <tr><td>When I spoke with them last</td>
 				  <td>
-					  <input type="text" th:field="*{dateLastSpokeTo}" />
+					  <input type="datetime-local" th:field="*{dateLastSpokeTo}" />
 					  <label th:if="${#fields.hasErrors('dateLastSpokeTo')}"  th:class="'error'">Please enter date last spoke with rep</label>
 				  </td>
 			  </tr>
